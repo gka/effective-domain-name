@@ -14,3 +14,4 @@ hs73hd3d.cloudfront.net
 google.com.br
 ```
 
+The class uses a public [database of effective top level domains](https://publicsuffix.org/list/effective_tld_names.dat). To update the class, just run ``make``.
