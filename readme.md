@@ -8,7 +8,7 @@ A simple PHP implementation for retrieving the [fully qualified domain name](htt
 nytimes.com
 
 > print FullyQualifiedDomainName::get('hs73hd3d.cloudfront.net') . "\n";
-hs73hd3d.cloudfront.net'
+hs73hd3d.cloudfront.net
 
 > print FullyQualifiedDomainName::get('www.google.com.br') . "\n";
 google.com.br
