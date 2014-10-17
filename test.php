@@ -4,7 +4,8 @@ include('EffectiveDomainName.php');
 
 $hostnames = array(
 	'mobile.nytimes.com',
-	'xyz.github.io',
+	'flightjs.github.io',
+	'upload.wikimedia.org',
 	'www.google.com.br'
 );
 

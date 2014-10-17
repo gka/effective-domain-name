@@ -1,5 +1,7 @@
 
-A simple PHP implementation for retrieving the effective domain name. The effective domain name is the domain stripped from all but one subdomain that doesn't qualify as effective TLD.
+A simple PHP implementation for retrieving the effective domain name. The effective domain name is the domain that includes exactly one level under the effective TLD.
+
+
 
 ```php
 > include('EffectiveDomainName.php');
@@ -7,8 +9,8 @@ A simple PHP implementation for retrieving the effective domain name. The effect
 > print EffectiveDomainName::get('mobile.nytimes.com') . "\n";
 nytimes.com
 
-> print EffectiveDomainName::get('hs73hd3d.cloudfront.net') . "\n";
-hs73hd3d.cloudfront.net
+> print EffectiveDomainName::get('flightjs.github.io') . "\n";
+flightjs.github.io
 
 > print EffectiveDomainName::get('www.google.com.br') . "\n";
 google.com.br
