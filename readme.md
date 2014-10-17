@@ -1,17 +1,19 @@
 
-A simple PHP implementation for retrieving the [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name).
+A simple PHP implementation for retrieving the effective domain name. The effective domain name is the domain stripped from all but one subdomain that doesn't qualify as effective TLD.
 
 ```php
-> include('FullyQualifiedDomainName.php');
+> include('EffectiveDomainName.php');
 
-> print FullyQualifiedDomainName::get('mobile.nytimes.com') . "\n";
+> print EffectiveDomainName::get('mobile.nytimes.com') . "\n";
 nytimes.com
 
-> print FullyQualifiedDomainName::get('hs73hd3d.cloudfront.net') . "\n";
+> print EffectiveDomainName::get('hs73hd3d.cloudfront.net') . "\n";
 hs73hd3d.cloudfront.net
 
-> print FullyQualifiedDomainName::get('www.google.com.br') . "\n";
+> print EffectiveDomainName::get('www.google.com.br') . "\n";
 google.com.br
 ```
 
-The class uses a public [database of effective top level domains](https://publicsuffix.org/list/effective_tld_names.dat). To update the class, just run ``make``.
+The algorithm uses the database of [public suffixes](https://publicsuffix.org/).
+
+To update this database, just run ``make``.

@@ -11,6 +11,10 @@ foreach (explode("\n", $list) as $line) {
 	}
 }
 
-$tpl = file_get_contents('template/FullyQualifiedDomainName.template.php');
+// add a few effective TLDs missing in the database
+$etlds['tumblr.com'] = true;
+$etlds['wordpress.com'] = true;
 
-file_put_contents('FullyQualifiedDomainName.php', str_replace('E_TLDS', var_export($etlds, true), $tpl));
+$tpl = file_get_contents('template/EffectiveDomainName.template.php');
+
+file_put_contents('EffectiveDomainName.php', str_replace('E_TLDS', var_export($etlds, true), $tpl));

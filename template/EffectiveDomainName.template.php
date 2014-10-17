@@ -1,6 +1,6 @@
 <?php
 
-class FullyQualifiedDomainName {
+class EffectiveDomainName {
 
 	public static function get($hostname) {
 		$parts = explode('.', $hostname);

@@ -1,16 +1,16 @@
 <?php
 
-include('FullyQualifiedDomainName.php');
+include('EffectiveDomainName.php');
 
 $hostnames = array(
 	'mobile.nytimes.com',
-	'abcdef.cloudfront.net',
+	'xyz.github.io',
 	'www.google.com.br'
 );
 
 foreach ($hostnames as $host) {
 	print $host . ' --> ';
-	print FullyQualifiedDomainName::get($host);
+	print EffectiveDomainName::get($host);
 	print "\n";
 }
 
