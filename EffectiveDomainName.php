@@ -6833,6 +6833,8 @@ class EffectiveDomainName {
   'yolasite.com' => true,
   'za.net' => true,
   'za.org' => true,
+  'tumblr.com' => true,
+  'wordpress.com' => true,
 );
 
 }
